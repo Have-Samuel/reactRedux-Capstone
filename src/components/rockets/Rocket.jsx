@@ -3,7 +3,6 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { updateRocketStatus } from '../../redux/rockets/activities';
 import StatusRes from './StatusRes';
-import styles from '../../routes/rockets.module.scss';
 
 function Rocket({ rocket }) {
   const dispatch = useDispatch();
@@ -13,10 +12,10 @@ function Rocket({ rocket }) {
 
   const handleStatus = () => dispatch(updateRocketStatus(rocketId, !status));
   return (
-    <div key={rocketId} className={styles.rocketsItems}>
-      <img className={styles.rocketsImg} src={rocketsImg} alt="Rocket setoff" />
+    <div key={rocketId}>
+      <img src={rocketsImg} alt="Rocket setoff" />
       <div>
-        <span className={styles.rocketsTitle}>
+        <span>
           {rocketName}
         </span>
         <StatusRes description={description} status={status} handleStatus={handleStatus} />
