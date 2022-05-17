@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`MissionProfile component should render with given state from redux store 1`] = `null`;
