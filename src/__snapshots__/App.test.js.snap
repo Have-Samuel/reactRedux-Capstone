@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Myprofile component should render with given state from redux store 1`] = `
+Array [
+  <div
+    className="nav"
+  >
+    <div
+      className="logoContainer"
+    >
+      <img
+        alt="Logo"
+        className="logoImg"
+        src="logo192.png"
+      />
+      <h1
+        className="logoText"
+      >
+        Space Traveler's Hub
+      </h1>
+    </div>
+    <ul
+      className="navItems"
+    >
+      <li
+        className="item"
+      >
+        <a
+          aria-current="page"
+          className="itemLink selectedItem"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        className="item"
+      >
+        <a
+          className="itemLink"
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        className="item"
+      >
+        <a
+          className="itemLink"
+          href="/myprofiles"
+          onClick={[Function]}
+        >
+          Myprofile
+        </a>
+      </li>
+    </ul>
+  </div>,
+  <div
+    className="rocketsContainer"
+  />,
+]
+`;

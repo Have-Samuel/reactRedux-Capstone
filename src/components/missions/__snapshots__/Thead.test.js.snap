@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Myprofile component should render with given state from redux store 1`] = `
+<tr>
+  <th>
+    Mission
+  </th>
+  <th>
+    Description
+  </th>
+  <th>
+    Status
+  </th>
+  <th>
+     
+  </th>
+</tr>
+`;

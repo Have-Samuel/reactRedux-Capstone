@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div>
+    <span
+      className="rocketsDescr"
+    />
+  </div>,
+  <div>
+    <button
+      className="btnRocket"
+      type="button"
+    >
+      Reservation
+    </button>
+  </div>,
+  " ",
+]
+`;

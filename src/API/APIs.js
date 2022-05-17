@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const AmazonAPI = axios.create({
+const rocketsAPI = axios.create({
   baseURL: 'https://api.spacexdata.com/v3/rockets',
   headers: { 'Content-type': 'application/json' },
 });

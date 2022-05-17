@@ -1,0 +1,4 @@
+const RETRIEVE_ROCKETS = 'spaceTravelers/rockets/RETRIEVE_ROCKETS';
+const CHANGE_ROCKET_STATUS = 'spaceTravelers/missions/CHANGE_MISSION_STATUS';
+
+export { RETRIEVE_ROCKETS, CHANGE_ROCKET_STATUS };
