@@ -1,6 +1,5 @@
-import { missionsAPI, rocketsAPI } from './APIs';
+import rocketsAPI from './APIs';
 
 const getRockets = () => rocketsAPI.get();
-const getMissions = () => missionsAPI.get();
 
-export { getRockets, getMissions };
+export default getRockets;

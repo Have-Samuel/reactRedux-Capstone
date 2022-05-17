@@ -5,9 +5,4 @@ const rocketsAPI = axios.create({
   headers: { 'Content-type': 'application/json' },
 });
 
-const missionsAPI = axios.create({
-  baseURL: 'https://api.spacexdata.com/v3/missions',
-  headers: { 'Content-type': 'application/json' },
-});
-
-export { rocketsAPI, missionsAPI };
+export default rocketsAPI;

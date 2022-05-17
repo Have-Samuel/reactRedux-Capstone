@@ -1,4 +1,4 @@
-import { getRockets } from '../../API/services';
+import getRockets from '../../API/services';
 import { RETRIEVE_ROCKETS, CHANGE_ROCKET_STATUS } from './types';
 
 const retrieveRockets = () => async (dispatch) => {

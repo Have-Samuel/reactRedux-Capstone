@@ -1,4 +1,0 @@
-const RETRIEVE_MISSIONS = 'spaceTravelers/missions/RETRIEVE_MISSIONS';
-const CHANGE_MISSION_STATUS = 'spaceTravelers/missions/CHANGE_MISSION_STATUS';
-
-export { RETRIEVE_MISSIONS, CHANGE_MISSION_STATUS };
