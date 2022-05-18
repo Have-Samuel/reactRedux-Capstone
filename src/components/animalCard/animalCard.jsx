@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowCircleRightOutlined } from '@mui/icons-material';
 import PropTypes from 'prop-types';
-import './Fishcard.css';
+import './animalCard.css';
 
 const animalCard = ({
   name, img, onClick, weight, pos,

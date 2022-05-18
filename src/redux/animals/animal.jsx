@@ -1,5 +1,5 @@
 /* eslint-disable default-case */
-import fetchAnimalData from '../,./API/APIs';
+import fetchAnimalData from '../../API/APIs';
 
 const GET_ANIMAL_REQUEST = 'teleFood/Animal/FETCH/GET_REQUEST';
 const GET_ANIMAL_SUCCESS = 'telefood/Animal/GET_SUCCESS';

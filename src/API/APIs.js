@@ -12,8 +12,8 @@ export default async function fetchAnimalData() {
   if (response.status !== 200) {
     throw new Error('Please check your endpoint');
   } try {
-    const ainmalData = await response.json();
-    return ainmalData;
+    const animalData = await response.json();
+    return animalData;
   } catch (error) {
     throw new Error(error.message);
   }
