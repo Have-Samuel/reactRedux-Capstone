@@ -1,11 +1,13 @@
-import { applyMiddleware, combineReducers, configureStore } from 'redux';
+import { applyMiddleware, combineReducers } from 'redux';
+import { configureStore } from '@reduxjs/toolkit'
 import thunk from 'redux-thunk';
+// import logger from 'redux-logger';
 import AnimalReducer from './animals/animal';
 
-const root = combineReducers({
+const rootReducer = combineReducers({
   animal: AnimalReducer,
 });
-const store = configureStore(root, applyMiddleware(thunk));
+const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk));
 
 export default store;
 
@@ -13,7 +15,7 @@ export default store;
 // import logger from 'redux-logger';
 // import AnimalReducer from './animals/animal';
 
-// const reducer = Reducer;
+// const reducer = AnimalReducer;
 
 // const store = configureStore({
 //   reducer,

@@ -1,9 +1,9 @@
 import React from 'react';
-import { ArrowCircleRightOutlined } from '@mui/icons-material';
+import { IoIosArrowDropleftCircle } from 'react-icons/io';
 import PropTypes from 'prop-types';
 import './animalCard.css';
 
-const animalCard = ({
+const AnimalCard = ({
   name, img, onClick, weight, pos,
 }) => (
   <div
@@ -11,20 +11,20 @@ const animalCard = ({
     onClick={onClick}
     onKeyDown={onClick}
     aria-hidden="true"
-    className="fishcard"
+    className="animalcard"
   >
-    <ArrowCircleRightOutlined className="pointer" />
-    <div className="fishname">
+    <IoIosArrowDropleftCircle className="pointer" />
+    <div className="animalname">
       <h3>{name}</h3>
       <small>{`${weight}kgs`}</small>
     </div>
     <div className={pos === 1 || pos === 2 || pos === 5 || pos === 6 || pos === 9
-      ? 'overlay lightblue' : 'overlay darkblue'}
+      ? 'overlay lightpink' : 'overlay darkpink'}
     />
   </div>
 );
 
-animalCard.propTypes = {
+AnimalCard.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
@@ -32,4 +32,4 @@ animalCard.propTypes = {
   pos: PropTypes.number.isRequired,
 };
 
-export default animalCard;
+export default AnimalCard;

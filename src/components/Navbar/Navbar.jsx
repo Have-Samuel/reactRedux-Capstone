@@ -1,12 +1,18 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import ArrowBackIosNewRoundIcon from '@mui/icons-metarial/ArrowBackIosNewRound';
 import './Navbar.css';
-import { Navlink } from 'react-router-dom';
+import { IoIosArrowBack } from "react-icons/io";
+import { NavLink } from 'react-router-dom';
 
 const Navbar = ({ title, back }) => (
   <nav className="nav">
-    {back ? (<Navlink to="/"><ArrowBackIosNewRoundIcon className="back" /></NavLink>) : <img className="nav-icons" src="./images/polar-beer.png" alt="animal" />}
+    {back ? (
+      <NavLink to="/">
+        <IoIosArrowBack
+          className="back"
+        />
+      </NavLink>
+    ) : <img className="nav-icons" src="./images/polar-bear.png" alt="animal" />}
     <h2 className="nav-title">{title}</h2>
     <div className="nav-search">
       <img className="nav-icons mic" src="./images/mic.png" alt="mic" />
@@ -15,12 +21,12 @@ const Navbar = ({ title, back }) => (
   </nav>
 );
 
-Navbar.PropTypes = {
+Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   back: PropTypes.bool,
 };
 
-Navba.defaultProps = {
+Navbar.defaultProps = {
   back: false,
 };
 

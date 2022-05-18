@@ -1,4 +1,4 @@
-.fishcard {
+.animalcard {
   height: 200px;
   width: 50%;
   display: flex;
@@ -21,21 +21,21 @@
   z-index: 1;
 }
 
-.fishname,
+.animalname,
 .pointer {
   z-index: 10;
 }
 
-.lightblue {
-  background-color: rgba(0, 162, 255, 0.6);
+.lightpink {
+  background-color: rgba(243, 53, 211, 0.6);
 }
 
-.darkblue {
-  background-color: rgba(0, 162, 255, 0.25);
+.darkpink {
+  background-color: rgba(185, 3, 115, 0.25);
 }
 
 @media screen and (min-width: 768px) {
-  .fishcard {
+  .animalcard {
     height: 400px;
   }
 }

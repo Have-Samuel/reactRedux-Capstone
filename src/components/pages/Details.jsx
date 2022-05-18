@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import Navbar from '../Navbar/Navbar';
 
 const DetailsPage = () => {
@@ -10,7 +10,7 @@ const DetailsPage = () => {
     <>
       <header>
         <Navbar title={animal.name} back />
-        <img className="headr-img" src={animal.img} alt={animal.name} />
+        <img className="header-img" src={animal.img} alt={animal.name} />
       </header>
       <h6>Fact box</h6>
       <main>
@@ -29,10 +29,10 @@ const DetailsPage = () => {
           </li>
           <il>
             <span className="factName">Active time</span>
-            <small className="factaProp">{animal.active}</small>
+            <small className="factProp">{animal.active}</small>
           </il>
           <li>
-            <span className="factName">Maximium length</span>
+            <span className="factName">Maximum length</span>
             <small className="factProp">{`${animal.max.Length}m`}</small>
           </li>
           <li>
@@ -45,7 +45,7 @@ const DetailsPage = () => {
           </li>
           <li>
             <span className="factName">Minimum weight</span>
-            <small className="factprop">{`${animal.minLength}`}</small>
+            <small className="factProp">{`${animal.minLength}`}</small>
           </li>
           <li>
             <span className="factName">Habitat</span>

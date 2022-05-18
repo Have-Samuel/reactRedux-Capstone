@@ -1,11 +1,10 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-dom';
-import Navbar from "../Navbar/Navbar";
-import animalCard from '../animalCard/animalCard';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import Navbar from '../Navbar/Navbar';
+import AnimalCard from '../animalCard/animalCard';
 import './Home.css';
-import { getAnimal } from '../redux/aninmal/animal';
+import { getAnimal } from '../../redux/animals/animal';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -16,11 +15,11 @@ const HomePage = () => {
   useEffect(() => {
     if (!animalArray.length) dispatch(getAnimal());
     setAnimal(animalArray);
-  }, [animalArray]);
+  }, [animalArray, dispatch]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    let val = e.target.value;
+  const handleSearch = (event) => {
+    event.preventDefault();
+    let val = event.target.value;
     if (val.length > 0) {
       val = val.toLowercase();
       const searchRes = animalArray.filter((arr) => arr.name.toLowercase().includes(val));
@@ -34,7 +33,7 @@ const HomePage = () => {
     <>
       <header className="header">
         <Navbar title="PerspectiveWild" />
-        <img className="home-img" src="images/kindpng_7177875.png" alt="Image" />
+        <img className="home-img" src="images/kindpng_7177875.png" alt="Img" />
         <div className="image-cover" />
       </header>
       <div className="search-sec">
@@ -43,7 +42,7 @@ const HomePage = () => {
       </div>
       <main className="main">
         {animal.map((animal) => (
-          <animalCard
+          <AnimalCard
             key={animal.id}
             name={animal.name}
             img={animal.image}
