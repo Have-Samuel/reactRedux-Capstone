@@ -1,5 +1,5 @@
 import { applyMiddleware, combineReducers } from 'redux';
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 // import logger from 'redux-logger';
 import AnimalReducer from './animals/animal';
