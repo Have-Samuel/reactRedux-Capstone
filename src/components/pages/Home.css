@@ -21,7 +21,7 @@
 .input {
   width: 150px;
   background-color: inherit;
-  border: 1px solid rgb(225, 139, 236);
+  border: 1px solid rgb(145, 10, 223);
   padding: 3px 5px;
   font-size: 11px;
   border-radius: 5px;
@@ -30,7 +30,7 @@
 
 .input:focus {
   outline: rgb(217, 255, 0);
-  background-color: rgb(233, 196, 233);
+  background-color: rgb(1, 255, 255);
 }
 
 .input::placeholder {
@@ -39,8 +39,8 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    height: 550px;
-    padding: 77px 14px 0;
+    height: 630px;
+    padding: 50px 16rem 0;
   }
 }
 

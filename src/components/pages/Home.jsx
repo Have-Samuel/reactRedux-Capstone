@@ -32,8 +32,8 @@ const HomePage = () => {
   return (
     <>
       <header className="header">
-        <Navbar title="Perspective Wild" />
-        <img className="home-img" src="images/forever.png" alt="Img" />
+        <Navbar title="Respect For Wildlife" />
+        <img className="home-img" src="images/Pearl.png" alt="Img" />
         <div className="image-cover" />
       </header>
       <div className="search-sec">
