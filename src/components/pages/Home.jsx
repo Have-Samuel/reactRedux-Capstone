@@ -28,7 +28,7 @@ const HomePage = () => {
       setAnimal(animalArray);
     }
   };
-
+  console.log(animalArray);
   return (
     <>
       <header className="header">
@@ -37,7 +37,6 @@ const HomePage = () => {
         <div className="image-cover" />
       </header>
       <div className="search-sec">
-        <h4>Animal Species</h4>
         <input className="input" type="text" palceholder="Search Animal..." onChange={handleSearch} />
       </div>
       <main className="main">

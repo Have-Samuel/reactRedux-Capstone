@@ -1,18 +1,16 @@
 import React from 'react';
-import { render } from 'react-dom';
+import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import App from '../App';
 import store from '../redux/configureStore';
 
 describe('render App correctly', () => {
   test('render', () => {
-    const tree = render(
-      <React.StrictMode>
+    const value = renderer.create(
         <Provider store={store}>
           <App />
         </Provider>
-      </React.StrictMode>,
     );
-    expect(tree).toMatchInlineSnapshot();
+    expect(value).toMatchSnapshot();
   });
 });

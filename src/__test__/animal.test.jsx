@@ -1,43 +1,30 @@
-import { applyMiddleWare, configureStore } from 'redux';
+import { applyMiddleware, combineReducers } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import AnimalReducer, { getAnimalFail, getAnimalRequest, getAnimalSuccess } from '../redux/animals/animal';
+import AnimalReducer, { getAnimalFail, getAnimalSuccess } from '../redux/animals/animal';
 
-const initialState = {
-  loading: false,
-  animalArray: [],
-  error: '',
-};
-
-const store = configureStore(
-  AnimalReducer,
-  applyMiddleWare(thunk),
-);
+const rootReducer = combineReducers({
+  animal: AnimalReducer,
+});
+const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk));
 
 describe('AnimalReducer', () => {
-  describe('getAnimal actions', () => {
-    it('shouls return the exact initial state', () => {
-      expect(store.getState()).toEqual(initialState);
+    it('grt error msg if error state is equal to new msg', () => {
+      const newMsg = 'Error fetching data';
+      store.dispatch(getAnimalFail(newMsg));
+      console.log(store.getState().animal.error);
+      expect(store.getState().animal.error).toEqual(newMsg);
     });
-
-    it('should return loading key in the initial state to be true', () => {
-      store.dispatch(getAnimalRequest());
-      expect(store.getState().loading).toBeTtuthy();
-    });
-
-    it('should return an error', () => {
-      const newError = 'check Endpoint then try again';
-      store.dispatch(getAnimalFail(newError));
-      expect(store.getState().error).toEqual(newError);
-    });
-
-    it('should return item in the animalArray', () => {
+    
+    // The mock for fetching Data
+    it('Fetching data using getAnimalSuccessAction', () => {
       const newAnimalArrayData = [{
-        id: 112,
-        name: 'Elephant',
-        diet: 'Rhoinoserus',
+        id: 70,
+        sciName: "Vulpes zerda",
+        diet: "Fruit, seeds, eggs, termites, and lizards",
       }];
       store.dispatch(getAnimalSuccess(newAnimalArrayData));
-      expect(store.getState().animalArrary).toEqual(newAnimalArrayData);
+      console.log(store.getState().animal);
+      expect(store.getState().animal.animalArray).toEqual(newAnimalArrayData);
     });
   });
-});
