@@ -1,4 +1,3 @@
-/* eslint-disable default-case */
 import fetchAnimalData from '../../API/APIs';
 
 const GET_ANIMAL_REQUEST = 'teleFood/Animal/FETCH/GET_REQUEST';
@@ -27,7 +26,7 @@ const getAnimalFail = (error) => ({
 
 function getAnimal() {
   return (dispatch) => {
-    dispatchEvent(getAnimalRequest());
+    dispatch(getAnimalRequest());
     fetchAnimalData()
       .then((data) => {
         const animalJSON = data.map((dat, i) => ({

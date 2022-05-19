@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router';
+import { useLocation } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 
 const DetailsPage = () => {
@@ -12,7 +12,6 @@ const DetailsPage = () => {
         <Navbar title={animal.name} back />
         <img className="header-img" src={animal.img} alt={animal.name} />
       </header>
-      <h6>Fact box</h6>
       <main>
         <ul className="facts">
           <li>
@@ -25,27 +24,27 @@ const DetailsPage = () => {
           </li>
           <li>
             <span className="factName">animal class</span>
-            <snall className="factProp">{animal.group}</snall>
+            <small className="factProp">{animal.group}</small>
           </li>
-          <il>
+          <li>
             <span className="factName">Active time</span>
             <small className="factProp">{animal.active}</small>
-          </il>
+          </li>
           <li>
             <span className="factName">Maximum length</span>
-            <small className="factProp">{`${animal.max.Length}m`}</small>
+            <span className="factProp">{`${animal.maxLength}m`}</span>
           </li>
           <li>
             <span className="factName">Min length</span>
-            <small className="factProp">{`${animal.minLength}m`}</small>
+            <span className="factProp">{`${animal.minLength}m`}</span>
           </li>
           <li>
             <span className="factName">Maximum Weight</span>
-            <small className="factProp">{`${animal.manLength}`}</small>
+            <span className="factProp">{`${animal.manLength}`}</span>
           </li>
           <li>
             <span className="factName">Minimum weight</span>
-            <small className="factProp">{`${animal.minLength}`}</small>
+            <span className="factProp">{`${animal.minLength}`}</span>
           </li>
           <li>
             <span className="factName">Habitat</span>

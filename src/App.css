@@ -9,17 +9,17 @@ img {
 }
 
 body {
-  background-color: rgb(0, 153, 255);
+  background-color: rgb(179, 15, 143);
   color: #fff;
 }
 
 .accordion {
-  background-color: rgb(9, 83, 133) !important;
+  background-color: rgb(126, 17, 80) !important;
   padding: 10px 2px;
 }
 
 .accordion-eader > .accordion-button {
-  background-color: rgb(9, 83, 133);
+  background-color: rgb(133, 9, 112);
   color: #fff;
 }
 
@@ -81,7 +81,7 @@ small {
 }
 
 .facts > li:nth-child(odd) {
-  background-color: rgba(0, 63, 99, 0.6);
+  background-color: rgba(190, 18, 182, 0.6);
 }
 
 @media screen and (min-width: 768px) {

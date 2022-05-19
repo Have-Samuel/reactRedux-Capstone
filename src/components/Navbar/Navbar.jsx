@@ -12,7 +12,7 @@ const Navbar = ({ title, back }) => (
           className="back"
         />
       </NavLink>
-    ) : <img className="nav-icons" src="./images/polar-bear.png" alt="animal" />}
+    ) : <img className="nav-icons" src="./images/Pearl.png" alt="animal" />}
     <h2 className="nav-title">{title}</h2>
     <div className="nav-search">
       <img className="nav-icons mic" src="./images/mic.png" alt="mic" />
